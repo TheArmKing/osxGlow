@@ -36,16 +36,21 @@ id monitor;
 uintptr_t m_iTeamNum = 0x12C;
 
 // Customizations
+
+// Default behaviour of whether these should be turned on upon injection
 bool shouldGlow = true;
 bool shouldGlowTeam = true;
 
+// Keybinds for toggling the glow
 int toggleGlowKey = kVK_RightArrow;
 int toggleTeamKey = kVK_LeftArrow;
 
+// Enemy glow customizations
 Vector enemyColor = RGB(242,117,117);
 float enemyAlpha = 1.0f;
 GlowRenderStyle_t enemyStyle = GLOWRENDERSTYLE_DEFAULT;
 
+// Team glow customizations
 Vector teamColor = RGB(117,242,165);
 float teamAlpha = 0.6f;
 GlowRenderStyle_t teamStyle = GLOWRENDERSTYLE_DEFAULT;
