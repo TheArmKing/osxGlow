@@ -6,6 +6,7 @@ I have simply done the following:
 - Added team unlink using `iTeam_Num`
 - Added keybinds (Right arrow to toggle full glow and left arrow to toggle only team glow)
 - Restructured the code
+- Added `build.command`
 
 # Usage
 Launch `CSGO` and then run `load.command` in terminal. (It will ask for password). The compiled dylib must be in the same folder as the `load.command` file. A pre-compiled `osxGlow.dylib` is provided in the `main` folder along with `load.command` (to inject) and `unload.command` (to de-inject) the dylib.
