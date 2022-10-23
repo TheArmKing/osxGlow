@@ -36,7 +36,7 @@ int __attribute__((constructor)) start() {
         /* Alternative: (in case sig changes)
         search string '%.2f Aborting fadeout' or 'Killer replay stuck waiting for tick message for %.2fs'
         go to pseudocode -> first BL in this function -> pseudocode -> last BL in the function -> the other xref*/
-        uintptr_t func_addr = scan("osx64/client.dylib", (unsigned char*)"\x55\x48\x89\xE5\x41\x57\x41\x56\x41\x55\x41\x54\x53\x48\x83\xEC\x38\x48\x89\xCB\x49\x89\xF4", "xxxxxxxxxxxxxxxxxxxxxxx");
+        uintptr_t func_addr = scan("osx64/client.dylib", (unsigned char*)"\x55\x48\x89\xE5\x41\x57\x41\x56\x41\x55\x41\x54\x53\x48\x83\xEC\x38\x4C\x89\xC3\x49\x89\xF4", "xxxxxxxxxxxxxxxxxxxxxxx");
         
         if (func_addr) {
             hooker.hook((void*)func_addr, (void*)hooked_GlowEffectSpectator);
